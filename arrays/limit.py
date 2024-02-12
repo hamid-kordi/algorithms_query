@@ -17,4 +17,4 @@ def check_input(array, min=None, max=None):
     return [x for x in array if check_max(x) and check_min(x)]
 
 
-print(check_input([1, 2, 3, 4, 5, 6, 7, 8], 4, 7))
+print(check_input([1, 2, 3, 4, 5, 6, 7, 8], max= 7))
