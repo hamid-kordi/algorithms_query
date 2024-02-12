@@ -21,7 +21,7 @@ def top_one(array):
     for i in array:
         if array.count(i) == max_val and result.count(i) == 0 :
             result.append(i)
-    return result
+    return result,max_val
 
 
 print(top_one([1, 2, 3, 4, 4, 3, 2, 1, 1, 1, 2, 3, 4, 5, 6, 7, 8, 8, 2]))
