@@ -1,19 +1,30 @@
 """
-Given an array of integers, return indices of the two numbers
-such that they add up to a specific target.
-
-You may assume that each input would have exactly one solution,
-and you may not use the same element twice.
-
-Example:
-    Given nums = [2, 7, 11, 15], target = 9,
-
-    Because nums[0] + nums[1] = 2 + 7 = 9,
-    return (0, 1)
+Caesar encryption algorithm is in this order that it takes each letter and returns 3 letters after it.
+This algorithm is very old
 """
-
 
 from string import ascii_letters
 
+print(type(ascii_letters))
+print(ascii_letters[1])
 
-print(ascii_letters)
+
+def cipher(phrase):
+    lst = list(phrase)
+    lst_main = list(ascii_letters)
+    result = []
+    for i in lst:
+        if i == "x":
+            result.append("a")
+        elif i == "y":
+            result.append("b")
+        elif i == "z":
+            result.append("c")
+        else:
+            temp = lst_main.index(i) + 3
+            result.append(lst_main[temp])
+    result = "".join(result)
+    return result
+
+
+print(cipher("oiahnocliuehrsvig hjsemopvghsls"))
