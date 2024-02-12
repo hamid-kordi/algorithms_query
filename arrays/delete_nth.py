@@ -9,17 +9,13 @@ which leads to [1,2,3,1,2,3]
 
 # v :1.10.0
 
-from collections import Counter
 
 def delete(lst, N):
     als = []
-    count = Counter(lst)
-    for i in lst:
-        if count[i] < N:
-            for j in count[i]:
-                als.append(i)
-    
-    return lst
+    for var in lst:
+        if als.count(var) <N:
+            als.append(var)
+    return als
 
 
-print(delete([1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6], 1))
+print(delete([1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6], 2))
