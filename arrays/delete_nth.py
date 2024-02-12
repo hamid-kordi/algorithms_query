@@ -7,10 +7,11 @@ drop the next [1,2] since this would lead to 1 and 2 being in the result 3 times
 which leads to [1,2,3,1,2,3]
 """
 
+
+
 # v :1.10.0
 
-
-def delete(lst, N):
+def delete(lst, N=1):
     als = []
     for var in lst:
         if als.count(var) <N:
