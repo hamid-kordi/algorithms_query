@@ -5,26 +5,21 @@ This algorithm is very old
 
 from string import ascii_letters
 
-print(type(ascii_letters))
-print(ascii_letters[1])
 
 
-def cipher(phrase):
+def cipher(phrase, n):
     lst = list(phrase)
     lst_main = list(ascii_letters)
     result = []
     for i in lst:
-        if i == "x":
-            result.append("a")
-        elif i == "y":
-            result.append("b")
-        elif i == "z":
-            result.append("c")
-        else:
-            temp = lst_main.index(i) + 3
+        temp = lst_main.index(i) + n
+        if temp < len(lst_main):
             result.append(lst_main[temp])
+        else:
+            tempo = n - (len(lst_main) - lst_main.index(i))
+            result.append(lst_main[tempo])
     result = "".join(result)
     return result
 
 
-print(cipher("oiahnocliuehrsvig hjsemopvghsls"))
+print(cipher("XYZ", 5))
