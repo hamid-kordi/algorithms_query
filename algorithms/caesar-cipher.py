@@ -25,6 +25,15 @@ def decipher(phrase,n):
     print(">> decipher this phrase : ",phrase)
     lst = list(phrase)
     lst_main = list(ascii_letters)
-
-    return phrase
-print(cipher("asdXYZ", 5))
+    result = []
+    for i in lst:
+        temp = lst_main.index(i) - n
+        if temp>=0:
+            result.append(lst_main[temp])
+        else:
+            tempo = len(lst_main) + temp
+            result.append(lst_main[tempo])
+    result = "".join(result)
+        
+    return result
+print(decipher("abc", 1))
