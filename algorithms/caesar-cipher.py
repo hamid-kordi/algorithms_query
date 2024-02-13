@@ -22,4 +22,4 @@ def cipher(phrase, n):
     return result
 
 
-print(cipher("XYZ", 5))
+print(cipher("asdXYZ", 5))
