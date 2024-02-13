@@ -21,5 +21,10 @@ def cipher(phrase, n):
     result = "".join(result)
     return result
 
+def decipher(phrase,n):
+    print(">> decipher this phrase : ",phrase)
+    lst = list(phrase)
+    lst_main = list(ascii_letters)
 
+    return phrase
 print(cipher("asdXYZ", 5))
