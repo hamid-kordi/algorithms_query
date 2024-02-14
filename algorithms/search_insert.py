@@ -6,6 +6,7 @@
 
 """
 
+
 def serch_insert(array, N):
     if N in array:
         result = array.index(N)
@@ -15,6 +16,8 @@ def serch_insert(array, N):
         result = array.index(N)
     return result
 
+
+print(serch_insert([1, 5, 6, 7, 3, 4], 2))
 
 
 """
@@ -29,21 +32,20 @@ About this section:
 """
 
 
-def search_insert_hand(array,N):
+def search_insert_manually(array, N):
     array.sort()
     if N in array:
         result = array.index(N)
     else:
         for i in array:
-            if N <= array[0] and array.index(i) == 0 :
-                array.insert(0,N)
-            elif N > array[len(array)-1] and array.index(i) == (len(array)-1) : 
-                array.insert(len(array),N)
-            elif N>i and N<= array[array.index(i) + 1]:
-                array.insert(array.index(i)+1,N)
+            if N <= array[0] and array.index(i) == 0:
+                array.insert(0, N)
+            elif N > array[len(array) - 1] and array.index(i) == (len(array) - 1):
+                array.insert(len(array), N)
+            elif N > i and N <= array[array.index(i) + 1]:
+                array.insert(array.index(i) + 1, N)
     result = array.index(N)
     return result
 
 
-
-print(search_insert_hand([1, 5, 6, 7, 3, 4], 2))
+print(search_insert_manually([1, 5, 6, 7, 3, 4], 2))
