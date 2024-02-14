@@ -17,6 +17,18 @@ def serch_insert(array, N):
 
 
 
+"""
+About this section:
+    We proceed with three assumptions
+    * In the first case, our number is smaller than the smallest number in the list    
+    * Or our number is greater than the largest number in the list
+    * Or it is between these two values and between two other values in our list
+
+-- The list is sorted
+
+"""
+
+
 def search_insert_hand(array,N):
     array.sort()
     if N in array:
