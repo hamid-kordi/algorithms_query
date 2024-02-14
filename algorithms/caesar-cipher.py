@@ -36,4 +36,7 @@ def decipher(phrase,n):
     result = "".join(result)
         
     return result
-print(decipher("abc", 1))
+
+
+
+print(decipher(cipher("acdvb",4),4))
