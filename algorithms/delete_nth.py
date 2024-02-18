@@ -11,10 +11,13 @@ which leads to [1,2,3,1,2,3]
 
 # v :1.10.0
 
-def delete(lst, N=1):
+def delete(lst, num_rep=1):
+    """
+    only for clean code :|
+    """
     als = []
     for var in lst:
-        if als.count(var) <N:
+        if als.count(var) <num_rep:
             als.append(var)
     return als
 

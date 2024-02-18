@@ -8,7 +8,6 @@ max = 3 => array_ch = [1, 2, 3]
 
 """
 
-
 def check_input(array, min=None, max=None):
 
     check_min = lambda variable: True if min is None else (variable >= min)
