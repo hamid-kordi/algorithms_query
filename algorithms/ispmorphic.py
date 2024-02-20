@@ -4,7 +4,6 @@ the algorithms:
 foo , doe => False
 foo , dee => True
 
-
 """
 
 
@@ -17,8 +16,7 @@ def isomorphic(str1: str, str2: str):
     if len_les1 != len_les2:
         result = 0
     else:
-        i=0
-            
+        i = 0  # pylint: disable=unused-variable
         result = 1
 
     return bool(result)
