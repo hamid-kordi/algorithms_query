@@ -8,7 +8,14 @@ a1z26
 
 
 def encode(plain):
-    return [ord(i) for i in plain]
+    "code your string"
+    return [ord(elem) for elem in plain]
 
 
-print(encode("salam"))
+def decode(plain):
+    "decode your num to str"
+
+    return "".join([chr(elem) for elem in plain])
+
+
+print(decode([97, 109, 107]))
