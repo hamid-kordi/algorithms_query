@@ -32,4 +32,4 @@ def max_profit(prices):
         return max_so_far
 
 
-print(buy_sell([10, 2, 4, 5, 7, 2, 4, 1]))
+print(max_profit([10, 2, 4, 5, 7, 2, 4, 1]))
