@@ -13,4 +13,8 @@ def move_min(lst):
     for n in lst:
         if minimum > n :
             minimum= n
-    return minimum
+    lst.remove(minimum)
+    return lst
+
+
+print(move_min([4,5,6,8,2,7,1,-1,4,-6]))
