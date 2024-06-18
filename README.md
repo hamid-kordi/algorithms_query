@@ -1,12 +1,20 @@
-# algoritms
 
-### about algorithms
+# PPP(Python programming practice)
+
+We are going to learn a number of common algorithms together. Some of these are included in Litecode and are mentioned here. These are good algorithms to practice converting ideas into code. Use and enjoy
 
 
-In this project, by writing some algorithms with Python language, we seek to strengthen the understanding of programming using Python.
+## Authors
 
-In some codes, the use of Python modules made the work easier, but we did not use them as much as we could and tried to implement them with the most effective facilities.
-So for your implementation we only need to install Python and nothing else
+
+- [@hamid-kordi](https://github.com/hamid-kordi)
+### Appendix
+see my other projects: 
+
+[![gIThUB](https://img.shields.io/badge/github-000?style=for-the-badge&logo=github&logoColor=wight)](https://github.com/hamid-kordi?tab=repositories)
+
+
+
 
 
 
