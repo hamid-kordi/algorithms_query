@@ -14,14 +14,13 @@ Given n, calculate F(n).
 class Solution:
     def fib(self, n: int) -> int:
         if n == 0:
-            return 0 
+            return 0
         if n == 1:
             return 1
-        if n == 2 :
+        if n == 2:
             return 1
-        if n == 3 :
+        if n == 3:
             return 2
         else:
-            result = Solution.fib(self,n-1) + Solution.fib(self,n-2)
+            result = Solution.fib(self, n - 1) + Solution.fib(self, n - 2)
         return result
-        
