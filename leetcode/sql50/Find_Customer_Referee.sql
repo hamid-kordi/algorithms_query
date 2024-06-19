@@ -34,3 +34,9 @@
 SELECT name
 FROM Customer C
 WHERE C.referee_id IS DISTINCT FROM 2 ;
+
+
+-- faster : 
+select name
+from customer
+where referee_id<>2 or referee_id is null
