@@ -34,3 +34,8 @@ WHERE W.author_id = W.viewer_id
 ORDER BY id ASC;
 
 
+-- following query not for but it is a good example
+select distinct author_id as id from Views 
+where author_id = viewer_id order by id
+
+
