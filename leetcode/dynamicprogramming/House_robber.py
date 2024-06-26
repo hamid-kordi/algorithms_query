@@ -29,3 +29,11 @@ Total amount you can rob = 2 + 9 + 1 = 12.
 """
 
 from typing import List
+
+
+class Solution:
+    def rob(self, nums: List[int]) -> int:
+        head_tree = max(nums)
+
+
+        
