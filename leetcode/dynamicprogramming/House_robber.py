@@ -33,7 +33,13 @@ from typing import List
 
 class Solution:
     def rob(self, nums: List[int]) -> int:
-        head_tree = max(nums)
+        if len(nums) < 3:
+            return max(nums)
+        x, y = nums[0], max(nums[0], nums[1])
+        for i in range(2, len(nums)):
+            x, y = y, max(nums[i] + x, y)
+        return y
 
 
-        
+obj = Solution()
+print(obj.rob([2, 7, 9, 3, 1]))
