@@ -78,3 +78,13 @@ LEFT JOIN Transactions t ON v.visit_id = t.visit_id
 WHERE t.transaction_id IS NULL
 GROUP BY v.customer_id
 ORDER BY  count_no_trans ASC;
+
+
+
+
+-- best QUERY : 
+-- Write your PostgreSQL query statement below
+SELECT customer_id, count(*) as count_no_trans
+FROM Visits
+WHERE visit_id NOT IN (SELECT distinct visit_id FROM Transactions)
+GROUP BY customer_id;
