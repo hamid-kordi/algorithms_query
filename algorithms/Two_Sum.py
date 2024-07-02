@@ -36,9 +36,22 @@
 from typing import List
 
 
-class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
+class Solution1:
+    def twoSum1(self, nums: List[int], target: int) -> List[int]:
         for index, num in enumerate(nums):
             for j in range(index + 1, len(nums)):
                 if target == num + nums[j]:
                     return [index, j]
+
+
+# better solution :
+
+
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        buffer = dict()
+        for index, num in enumerate(nums):
+            if num in buffer:
+                return [buffer[num], index]
+            else:
+                buffer[target - num] = index
