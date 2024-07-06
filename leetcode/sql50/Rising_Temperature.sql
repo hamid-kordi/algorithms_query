@@ -48,7 +48,14 @@ FROM Weather w
 JOIN Weather e ON w.recordDate = e.recordDate + INTERVAL '1 day'
 where w.temperature > e.temperature;
 
+-- better : 
+SELECT  w.id
+FROM Weather w
+JOIN Weather e ON w.recordDate = e.recordDate + INTERVAL '1 day'
+where w.temperature > e.temperature;
 
+
+-- best
 
 SELECT current_day.id
 FROM Weather AS current_day
