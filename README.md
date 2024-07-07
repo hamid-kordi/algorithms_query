@@ -3,6 +3,10 @@
 
 We are going to learn a number of common algorithms together. Some of these are included in Litecode and are mentioned here. These are good algorithms to practice converting ideas into code. Use and enjoy
 
+# BQP(Best QUERY PostgreSql)
+We will examine some query problems together which are taken from Leetecode and their solution is very helpful
+
+
 
 ## Authors
 
@@ -20,4 +24,5 @@ see my other projects:
 
 ```
 python3.11
+postgresql
 ```
