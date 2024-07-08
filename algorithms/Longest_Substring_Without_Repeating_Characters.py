@@ -28,16 +28,16 @@ class Solution:
         result = 0
         for p2 in range(len(s)):
             char = s[p2]
-            if char in seen and p2 >= 1:
+            if char in seen and seen[char] >= p1:
+                print(seen[char])
                 p1 = seen[char] + 1
             else:
                 result = max(result, p2 - p1 + 1)
-                print(result)
+
             seen[char] = p2
 
-            print(seen)
         return result
 
 
 obj = Solution()
-print(obj.lengthOfLongestSubstring("pwwkew"))
+print(obj.lengthOfLongestSubstring("tmmzuxt"))
