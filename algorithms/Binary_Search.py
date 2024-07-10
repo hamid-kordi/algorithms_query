@@ -27,16 +27,37 @@ from typing import List
 
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
-        right = 0
+        right = len(nums) - 1
         left = 0
         while left <= right:
             mean = (left + right) // 2
             if target > nums[mean]:
                 left = mean + 1
-            if target < nums[mean]:
+            elif target < nums[mean]:
                 right = mean - 1
             else:
                 return mean
+        return -1
+
+
+# best solution :
+
+
+class Solution1:
+    def search(self, nums: List[int], target: int) -> int:
+        right = len(nums) - 1
+        left = 0
+        while left <= right:
+            mean = (left + right) // 2
+
+            if target == nums[mean]:
+                return mean
+
+            if target < nums[mean]:
+                right = mean - 1
+            else:
+                left = mean + 1
+
         return -1
 
 
