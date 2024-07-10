@@ -6,7 +6,6 @@ This algorithm is very old
 from string import ascii_letters
 
 
-
 def cipher(phrase, n):
     lst = list(phrase)
     lst_main = list(ascii_letters)
@@ -21,22 +20,22 @@ def cipher(phrase, n):
     result = "".join(result)
     return result
 
-def decipher(phrase,n):
-    print(">> decipher this phrase : ",phrase)
+
+def decipher(phrase, n):
+    print(">> decipher this phrase : ", phrase)
     lst = list(phrase)
     lst_main = list(ascii_letters)
     result = []
     for i in lst:
         temp = lst_main.index(i) - n
-        if temp>=0:
+        if temp >= 0:
             result.append(lst_main[temp])
         else:
             tempo = len(lst_main) + temp
             result.append(lst_main[tempo])
     result = "".join(result)
-        
+
     return result
 
 
-
-print(decipher(cipher("acdvb",4),4))
+print(decipher(cipher("acdvb", 4), 4))
